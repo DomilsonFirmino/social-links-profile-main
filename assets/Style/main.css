@@ -28,9 +28,11 @@ dd {
   margin: 0;
 }
 
+html,body{
+  height: 100%;
+}
 /* Set core body defaults */
 body {
-  min-height: 100vh;
   scroll-behavior: smooth;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
@@ -134,4 +136,69 @@ body{
   font-family: var(--ff-inter);
   font-size: var(--fs-base);
   font-weight: var(--fw-400);
+  background-color: var(--clr-N-Off-Black);
+  color: var(--clr-N-White);
+
+  display: grid;
+  align-content: center;
+}
+
+main{
+  --padding: .75rem;
+  --radius: .5rem;
+  
+  border-radius: calc(var(--radius)*1.25);
+  background-color: var(--clr-N-Dark-Grey);
+}
+
+@media screen and (min-width: 40em) {
+  main{
+    width: 28rem;
+  }
+  
+}
+
+main > div{
+  padding: 2rem;
+  text-align: center;
+}
+
+h1{
+  font-size: var(--fs-xl);
+  letter-spacing: 0.05ch;
+  border-radius: var(--radius)
+}
+
+h2{
+  font-size: var(--fs-base);
+  letter-spacing: 0.15ch;
+  color: var(--clr-P-green);
+}
+
+img{
+  border-radius: 100%;
+  max-width: 6.5rem;
+  margin: auto;
+}
+
+.card{
+  display: flex;
+  justify-content: center;
+  
+  font-size: var(--fs-md);
+  font-weight: var(--fw-600);
+  padding: var(--padding);
+  border-radius: var(--radius);
+  background-color: var(--clr-N-Grey);
+}
+.container{
+  width: min(50em, 100% - 4rem);
+  margin: auto;
+}
+
+.flow > * + *{
+  margin-top: 1rem;
+}
+.flow-1 > * + *{
+  margin-top: 1.5rem;
 }
