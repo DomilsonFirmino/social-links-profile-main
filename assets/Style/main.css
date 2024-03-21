@@ -144,16 +144,14 @@ body{
 }
 
 main{
-  --padding: .75rem;
   --radius: .5rem;
-  
   border-radius: calc(var(--radius)*1.25);
   background-color: var(--clr-N-Dark-Grey);
 }
 
 @media screen and (min-width: 40em) {
   main{
-    width: 28rem;
+    width: 30rem;
   }
   
 }
@@ -181,6 +179,10 @@ img{
   margin: auto;
 }
 
+
+.cards{
+  --padding: .75rem;
+}
 .card{
   display: flex;
   justify-content: center;
@@ -190,6 +192,13 @@ img{
   padding: var(--padding);
   border-radius: var(--radius);
   background-color: var(--clr-N-Grey);
+  transition: 0.3s ease-in-out;
+}
+
+.card:hover{
+  background-color: var(--clr-P-green);
+  color: var(--clr-N-Dark-Grey);
+  cursor: pointer;
 }
 .container{
   width: min(50em, 100% - 4rem);
@@ -200,5 +209,5 @@ img{
   margin-top: 1rem;
 }
 .flow-1 > * + *{
-  margin-top: 1.5rem;
+  margin-top: 2rem;
 }
